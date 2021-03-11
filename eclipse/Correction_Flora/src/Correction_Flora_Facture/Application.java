@@ -1,0 +1,140 @@
+package Correction_Flora_Facture;
+
+import java.util.ArrayList;
+import java.util.List;
+
+//import java.time.LocalDate;
+
+public class Application {
+
+	public static void main(String[] args) {
+		System.out.println("App Facturation sans classe 👉 pas organisé et on s'y perd dans toutes ces lignes de code");
+
+		// Contexte : logiciel de facturation
+		// ==================================
+		//
+		// Objectif #1 : Mieux organiser le code
+		// =====================================
+		//
+		// Problème : le code n'est pas organisé
+		// -------------------------------------
+		// Le code de toute l'application est rassemblé ici.
+		// Il n'y a pas d'organisation du code mis à part qu'on crée les variables
+		// au fur et à mesure qu'on a besoin d'afficher un élément de la facture.
+		//
+		// Problème : on se répète beaucoup (redondance)
+		// ---------------------------------------------
+		// On doit réécrire à chaque fois le code qui permet d'afficher le nom de la
+		// facture, le client, la date de facturation,...
+		// On répète les mêmes étapes ce qui nous fait perdre beaucoup de temps.
+		// En plus comme on fait tout à la main on peut se tromper.
+		//
+		// Est-ce qu'il y a un moyen de :
+		// ------------------------------
+		// - gagner du temps en ne répétant pas toujours les mêmes étapes ?
+		// - éviter de se tromper en réécrivant à la main chaque étapes ? Par exemple on
+		// pourrait oublier d'afficher la ligne de séparation entre l'en-tête de la
+		// facture et le contenu de celle-ci.
+		// - avoir un code plus lisible, mieux organisé car ici tout est en vrac et
+		// c'est difficile de s'y retrouver dans ces nombreuses lignes de code.
+		//
+		// Solution : créer des classes qui permettent de définir un code unique qu'on
+		// pourra plus facilement utiliser, maintenir et réutiliser
+		//
+		// Exercice : créer les classes suivante
+		// -------------------------------------
+		// - Client 👉 regroupe tout le code qui permet de représenter/afficher un
+		// client
+		//
+		// - Fournisseur 👉 regroupe tout le code qui permet de représenter/afficher un
+		// fournisseur
+		//
+		// - Produit 👉 regroupe tout le code qui permet de représenter/afficher un
+		// produit
+		//
+		// - Facture 👉 regroupe tout le code qui permet de représenter/afficher une
+		// facture
+		//
+		// - LigneFacture 👉 regroupe tout le code qui permet de représenter/afficher
+		// une ligne de facture
+		//
+
+		// FactureA
+
+		Client client1 = new Client();
+		client1.setNomClient("Muhammad"); 
+
+		Fournisseur apple = new Fournisseur();
+		apple.setNomFournisseur("Apple");
+		
+		Produit iphone11 = new Produit();
+		iphone11.setNomProduit("iPhone 11");
+		iphone11.setPrix(689.0f);
+		
+		
+		Fournisseur samsung = new Fournisseur();
+		samsung.setNomFournisseur("Samsung");
+		
+		Produit galaxyS20 = new Produit();
+		galaxyS20.setNomProduit("galaxyS20");
+		galaxyS20.setPrix(799.0f);
+		
+		
+		Facture factureA = new Facture();
+		factureA.setNumeroFacture(1);
+		factureA.setDateFacture("2020-03-07");
+		factureA.setClient(client1);
+		//LocalDate.parse(factureA.getDateFacture());
+		
+		Lignefacture f1 = new Lignefacture();
+		f1.setProduit(iphone11);
+		f1.setFournisseur(apple);
+	
+		Lignefacture f2 = new Lignefacture();
+		f2.setProduit(galaxyS20);
+		f2.setFournisseur(samsung);
+		
+		Lignefacture [] tab1 = {f1, f2};
+		factureA.setLignefacture(tab1);
+		
+		factureA.afficherDansConsole();
+
+		// FactureB
+		
+		Client client2 = new Client();
+		client2.setNomClient("Flora");
+
+		Fournisseur whirlpool = new Fournisseur();
+		whirlpool.setNomFournisseur("Whirlpool");
+		
+		Produit whirlpoolFreshCare = new Produit();
+		whirlpoolFreshCare.setNomProduit("WhirlpoolFreshCare");
+		whirlpoolFreshCare.setPrix(378.95f);
+		
+		
+		Facture factureB = new Facture();
+		factureB.setClient(client2);
+		factureB.setNumeroFacture(2); 
+		factureB.setDateFacture("2020-03-08");
+		//LocalDate.parse(factureB.getDateFacture());
+		
+		Lignefacture f3 = new Lignefacture();
+		f3.setProduit(whirlpoolFreshCare);
+		f3.setFournisseur(whirlpool);
+		
+		Lignefacture [] tab2 = {f3};
+		factureB.setLignefacture(tab2);
+		
+		factureB.afficherDansConsole();
+		
+		List<Produit> produits = new ArrayList<>();
+        produits.add(iphone11);
+        produits.add(galaxyS20);
+        produits.add(whirlpoolFreshCare);
+
+        for (Produit produit : produits) {
+            System.out.println("- " + produit.getNomProduit() + " (" + produit.getPrix() + " €) construit par " + produit.getFournisseur().getNomFournisseur());
+        }
+	
+	}
+}

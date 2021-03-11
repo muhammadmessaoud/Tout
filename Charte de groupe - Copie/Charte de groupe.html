@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+
+<html lang="fr"><head>
+
+    <meta charset="utf-8">
+    <title>Charte de groupe </title>
+    <meta name="description" content="Notre Charte de Promo">
+    <meta name="author" content="Promo Simplon Aulnay">
+  
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="skeleton.css">
+    <link rel="stylesheet" href="custom.css">
+  
+  </head>
+  
+  <body>
+    <header class="header">
+      <div class="container">
+        <h4>
+            Promo DWWM - Aulnay 2021
+        </h4>
+      </div>
+    </header>
+  
+    <main>
+      <div class="container">
+        <div class="row">
+          <div class="one-half column">
+            <h4>Ceci est notre charte de promo</h4>
+            <p>Ces règles nous unissent et ont été (longuement 😅) débatues et votées pour pouvoir selectionner celles qui nous correspondent et nous unissent. Les voici, prenez plaisir à les parcourir !</p>
+          </div>
+          <div class="one-half column">
+            <button class="button-primary" id="btn-charte">Accès charte</button>
+          </div>
+        </div>
+      </div>
+  
+      <div class="container card section" id="section-reussite">
+        <div class="row">
+          <div class="column">
+            <h4>Réussite Collective <span style="font-size: small;">(Cliquez pour étendre)</span></h4> 
+            <ul>
+              <li>Si j’ai fini un exercice, j’aide les autres</li>
+              <li>En cas de difficulté, je n’hésite pas à solliciter le groupe, à condition d’avoir suffisamment recherché en autonomie, si je demande de l’aide je m’engage à approfondir le sujet par moi même</li>
+              <li>Je pratique la critique positive, je donne des pistes d’amélioration/une argumentation et je reste bienveillant</li>
+              <li>Je partage mes sources, bonnes pratiques, trucs et astuces</li>
+              <li>Rester positif, parler aux autres en cas de soucis</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="container card section" id="section-reussite">
+        <div class="row">
+          <div class="column">
+            <h4>Vivre Ensemble <span style="font-size: small;">(Cliquez pour étendre)</span></h4> 
+            <ul>
+              <li>Je fais en sorte qu’il n’y ait pas de bruits parasites (téléphone en silencieux, je ramène mes écouteurs)</li>
+              <li>Je fais attention aux affaires des autres quand ils sont absents</li>
+              <li>Être soi-même</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="container card section" id="section-reussite">
+        <div class="row">
+          <div class="column">
+            <h4>Covid <span style="font-size: small;">(Cliquez pour étendre)</span></h4> 
+            <ul>
+              <li>Je nettoie mon espace espace de travail en fin de journée</li>
+              <li>Je respecte les gestes barrières</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="container card section" id="section-reussite">
+        <div class="row">
+          <div class="column">
+            <h4>Fun <span style="font-size: small;">(Cliquez pour étendre)</span></h4> 
+            <ul>
+              <li>J’organise un moment de divertissement 1 fois tous les 15 jours</li>
+              <li>Je fais un goûter en fin de semaine</li>
+              <li>Je participe à un repas dès que les restaurants seront (officiellement) réouvert</li>
+              <li>Je garde toujours une note d’humour pour un climat amical</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+  
+      <div class="container">
+        Grâce à ce règlement on obtient le code suivant : 
+        <pre><code>
+          var compétencesDePromo = [];
+          var humeurPromo = 'Au top'; 
+          if('règles comprises' == true &amp;&amp; 'règles appliquées' == true) {
+            compétencesDePromo.push(new Compétence()); 
+          } else {
+            humeurPromo = 'Pas top';
+          }
+        </code></pre>
+      </div>
+  
+  
+    </main>
+    <script>
+
+var acc = document.querySelectorAll(".column h4");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    /* Toggle between adding and removing the "active" class,
+    to highlight the button that controls the panel */
+    this.classList.toggle("active");
+
+    /* Toggle between hiding and showing the active panel */
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+
+    </script>
+    <form action="bouton">
+    <input class="favorite styled"
+    type="button"
+    value="Random Apprenant">
+    </form>
+    
+    
+  
+  
+  </body>
+  </html>

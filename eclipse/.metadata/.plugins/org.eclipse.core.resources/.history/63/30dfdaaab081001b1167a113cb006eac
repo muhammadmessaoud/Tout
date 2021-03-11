@@ -1,0 +1,28 @@
+package exo;
+
+public class Rectangle {
+	private double largeur;
+	private double longueur;
+	
+	public Rectangle(double la, double lo) {
+		largeur = la ;
+		longueur = lo;
+		// TODO Auto-generated constructor stub
+	}
+	public double getLargeur() {
+		return largeur;
+	}
+	public void setLargeur(double largeur) {
+		this.largeur = largeur;
+	}
+	public double getLongueur() {
+		return longueur;
+	}
+	public void setLongueur(double longueur) {
+		this.longueur = longueur;
+	}
+	
+	
+	
+
+}

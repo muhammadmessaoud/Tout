@@ -1,0 +1,10 @@
+package exo;
+
+public class main {
+	 
+	public main(String[] args) {
+		
+	new Rectangle(20,40);
+	
+	}
+}

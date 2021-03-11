@@ -1,0 +1,143 @@
+body{
+    background: linear-gradient(to bottom, #68EACC 0%, rgb(255, 74, 79) 100%);
+    height: 100vh;
+}
+
+.todos{
+    width: 500px;
+    /* min-height: 500px; */
+    margin: 100px auto 0;
+    box-shadow: 0 0 2px #767070;
+}
+
+.todos .todos_header{
+    background-color: red;
+    min-height: 80px;
+    padding: 10px;
+}
+
+.todos .todos_header h2{
+    text-align: center;
+    color: #fff;
+    font-size: 2em;
+    margin: 0 0 20px 0;
+}
+
+.todos form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.todos form .todo_title{
+    height: 50px;
+    padding: 0 15px;
+    font-size: 1.5em;
+    flex: 1;
+}
+
+.todos input[type=checkbox]
+{
+  cursor: pointer;
+  transform: scale(1.68);
+  padding: 10px;
+}
+
+
+.todos .todos_header .todo_button--insert{
+    width: 100px;
+    height: 54px;
+    cursor: pointer;
+    color: #fff;
+    border: 0;
+    outline: 0;
+}
+
+.todos .todos_list {
+    background-color: rgb(255 255 255);
+    min-height: 300px;
+    padding: 10px;
+    box-shadow: 0 0 5px #eee;
+}
+
+.todos .todos_list span{
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.todos .todos_list{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.todos .todo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.todos .todos_list li{
+    overflow: hidden;
+    padding: 20px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 1.5em;
+    padding: 20px 10px 20px 10px;
+    cursor: pointer;
+    transition: all .3s linear;
+}
+
+.todos .todos_list li:hover{
+    background-color: #eee;
+}
+
+[contenteditable]{
+    outline: none;
+    border: 0;
+    flex: 1;
+}
+
+
+.todos_buttons{
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+.bg_color_blue{
+    background-color: rgb(31, 154, 236);;
+}
+
+.fa-color_blue{
+    color: rgb(31, 154, 236);
+}
+
+.fa-color_red{
+    color: rgb(228, 58, 58);
+    font-size: 24px;
+}
+
+.fa-color_green{
+    color: rgb(106, 189, 81);
+}
+
+.hide{
+    display: none !important;
+}
+
+.show{
+    display: inline-block !important;
+}
+
+.bg_color{
+    background-color: red;
+    color: #fff;
+}
+
+.line {
+    text-decoration: line-through;
+}
+
+
+
+

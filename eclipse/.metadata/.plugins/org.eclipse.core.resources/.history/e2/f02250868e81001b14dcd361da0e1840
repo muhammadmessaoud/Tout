@@ -1,0 +1,67 @@
+package Exo_constructeur;
+
+public class Telephone {
+	private String tMarque;
+	private String tModel;
+	private float tprix;
+	
+	
+	public Telephone(String marque, String model, float prix) {
+		tMarque = marque ;
+		tModel = model ;
+		tprix = prix;
+		// TODO Auto-generated constructor stub
+	}
+
+	public String gettMarque() {
+		return tMarque;
+	}
+
+	public void settMarque(String tMarque) {
+		this.tMarque = tMarque;
+	}
+
+	public String gettModel() {
+		return tModel;
+	}
+
+	public void settModel(String tModel) {
+		this.tModel = tModel;
+	}
+
+	public float getTprix() {
+		return tprix;
+	}
+
+	public void setTprix(float tprix) {
+		this.tprix = tprix;
+	}
+	public String toString() {
+		return  "----------Téléphone----------"
+				"Marque : " + this.gettMarque() + "\r" +
+				"Model : " + this.gettModel() + "\r" +
+				"Prix : " + this.getTprix() + "\r"  ;
+	}
+				
+	// Créer propriété privée marque;
+    // Créer propriété privée modele;
+    // Créer propriété privée prix;
+
+    // Créer constructeur
+
+    // Créer getter marque
+    // Créer setter marque
+
+    // Créer getter modele
+    // Créer setter modele
+
+    // Créer getter prix
+    // Créer setter prix
+
+    // Créer toString
+
+
+	
+
+   
+}

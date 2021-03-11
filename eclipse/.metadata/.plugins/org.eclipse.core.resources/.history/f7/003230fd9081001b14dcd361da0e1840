@@ -1,0 +1,69 @@
+package Exo_constructeur;
+
+public class Ordinateur {
+	private String oMarque;
+	private String oModel;
+	private int oTaille;
+	private float oPrix;
+	public String getoMarque() {
+		return oMarque;
+	}
+
+
+	public void setoMarque(String oMarque) {
+		this.oMarque = oMarque;
+	}
+
+
+	public String getoModel() {
+		return oModel;
+	}
+
+
+	public void setoModel(String oModel) {
+		this.oModel = oModel;
+	}
+
+
+	public int getoTaille() {
+		return oTaille;
+	}
+
+
+	public void setoTaille(int oTaille) {
+		this.oTaille = oTaille;
+	}
+
+
+	public float getoPrix() {
+		return oPrix;
+	}
+
+
+	public void setoPrix(float oPrix) {
+		this.oPrix = oPrix;
+	}
+
+
+
+
+	public Ordinateur(String marque, String model, int taille, float prix) {
+		// TODO Auto-generated constructor stub
+		oMarque = marque;
+		oModel = model;
+		oTaille = taille;
+		oPrix = prix;
+	}
+
+
+	@Override
+	public String toString() {
+		return "Ordinateur [oMarque=" + oMarque + ", oModel=" + oModel + ", oTaille=" + oTaille + ", oPrix=" + oPrix
+				+ "]";
+	}
+
+
+	
+	
+	
+}

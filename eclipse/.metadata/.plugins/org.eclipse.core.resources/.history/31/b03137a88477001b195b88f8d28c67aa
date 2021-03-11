@@ -1,0 +1,20 @@
+package sqlix;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Village v = new Village();
+		v.numVillage = 1;	
+		v.nomVillage = "Aquilona";	
+		v.nbHuttes = 52;	
+		v.numProvince = 1;
+		
+		System.out.println("numvillage => "+ v.numVillage);
+		System.out.println("nomVillage => "+ v.nomVillage);
+		System.out.println("nbHuttes => "+ v.nbHuttes);
+		System.out.println("numProvince => "+ v.numProvince);
+		System.out.println("----------------------------------------------\r");
+		
+	}
+
+}

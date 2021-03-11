@@ -1,0 +1,113 @@
+import java.time.LocalDate;
+
+public class AppFacturationReutilisation {
+
+    public static void main(String[] args) {
+	System.out.println(
+		"App Facturation sans classe 👉 le seul moyen de réutiliser le code c'est faire des copier/coller");
+
+	// Contexte : logiciel de facturation
+	// ==================================
+	//
+	// Objectif #3 : Code réutilisable
+	// ===============================
+	//
+	// Problème : difficile de savoir quel bout de code copier/coller
+	// --------------------------------------------------------------
+	// Si on veut réutiliser un bout de code la seule solution sans les classes
+	// c'est de faire un copier/coller du code.
+	// Le problème c'est qu'on risque d'oublier des choses si le code à copier n'est
+	// pas bien organisé et est en vrac au milieu de beaucoup de lignes de code.
+	//
+	// Est-ce qu'il y a un moyen de :
+	// ------------------------------
+	// - réutiliser un bout de code sans copier/coller ?
+	// - éviter d'oublier un bout de code qu'il fallait aussi copier/coller ?
+	//
+	// Solution : créer des classes qui permettent de définir un code unique qu'on
+	// pourra plus facilement utiliser
+	//
+	// Modifier le code ci-dessous avec les éléments suivants :
+	// 1. on veut afficher la liste de tous les produits à la suite de toutes les
+	// factures
+	// L'affichage devra ressembler à ça :
+	// --------------------------------------------------------
+	// Liste des produits
+	// --------------------------------------------------------
+	// - iPhone 11 (689.0 €) construit par Apple
+	// - Galaxy S20 (799.0 €) construit par Samsung
+	// - Whirlpool Fresh Care (378.95 €) construit par Whirlpool
+	// --------------------------------------------------------
+	//
+	// Faire la même chose sur la version du code en classe créé précédemment. Il
+	// faudra réutiliser les objets LigneFacture créé précédemment.
+	//
+
+	// FactureA
+
+	System.out.println("========================================================");
+	int numeroFactureA = 1;
+	System.out.println("                      Facture numéro " + numeroFactureA);
+	System.out.println("========================================================");
+
+	LocalDate dateFactureA = LocalDate.parse("2020-03-07");
+	System.out.println("Date de création : " + dateFactureA);
+
+	String nomClient1 = new String("Toto");
+	System.out.println("Nom client : " + nomClient1);
+
+	System.out.println("--------------------------------------------------------");
+
+	float total = 0;
+
+	String nomIphone11 = new String("iPhone 11");
+	float prixIphone11 = 689.0f;
+	total += prixIphone11;
+	String fournisseurApple = new String("Apple");
+	System.out.println("- " + nomIphone11 + " (" + prixIphone11 + " €) construit par " + fournisseurApple);
+
+	String nomGalaxyS20 = new String("Galaxy S20");
+	float prixGalaxyS20 = 799.0f;
+	total += prixGalaxyS20;
+	String fournisseurSamsung = new String("Samsung");
+	System.out.println("- " + nomGalaxyS20 + " (" + prixGalaxyS20 + " €) construit par " + fournisseurSamsung);
+
+	System.out.println("--------------------------------------------------------");
+
+	System.out.println("Total : " + total);
+
+	System.out.println("");
+
+	// FactureB
+
+	System.out.println("========================================================");
+	int numeroFactureB = 2;
+	System.out.println("                      Facture numéro " + numeroFactureB);
+	System.out.println("========================================================");
+
+	LocalDate dateFactureB = LocalDate.parse("2020-03-08");
+	System.out.println("Date de création : " + dateFactureB);
+
+	String nomClient2 = new String("Lala");
+	System.out.println("Nom client : " + nomClient2);
+
+	System.out.println("--------------------------------------------------------");
+
+	total = 0;
+
+	String nomWhirlpoolFreshCare = new String("Whirlpool Fresh Care");
+	float prixWhirlpoolFreshCare = 378.95f;
+	total += prixWhirlpoolFreshCare;
+	String fournisseurWhirlpool = new String("Whirlpool");
+	System.out.println("- " + nomWhirlpoolFreshCare + " (" + prixWhirlpoolFreshCare + " €) construit par "
+		+ fournisseurWhirlpool);
+
+	total += prixIphone11;
+	System.out.println("- " + nomIphone11 + " (" + prixIphone11 + " €) construit par " + fournisseurApple);
+
+	System.out.println("--------------------------------------------------------");
+
+	System.out.println("Total : " + total);
+
+    }
+}

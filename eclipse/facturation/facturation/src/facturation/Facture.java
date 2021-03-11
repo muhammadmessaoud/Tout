@@ -1,0 +1,62 @@
+package facturation;
+
+//import java.time.LocalDate;
+
+public class Facture {
+	private int numeroFacture;
+	private String dateFacture;
+	private Lignefacture[] lignefacture;
+	private Client client;
+
+
+	public Client getClient() {
+		return client;
+	}
+
+	public void setClient(Client client) {
+		this.client = client;
+	}
+
+	public int getNumeroFacture() {
+		return numeroFacture;
+	}
+
+	public void setNumeroFacture(int numeroFacture) {
+		this.numeroFacture = numeroFacture;
+	}
+
+	public String getDateFacture() {
+		return dateFacture;
+	}
+
+	public void setDateFacture(String dateFacture) {
+		this.dateFacture = dateFacture;
+	}
+	
+	public Lignefacture[] getLignefacture() {
+		return lignefacture;
+	}
+	
+	public void setLignefacture(Lignefacture[] lignefacture) {
+		this.lignefacture = lignefacture;
+	}
+
+	public void afficherDansConsole() {
+		float total = 0;
+		System.out.println("========================================================");
+		System.out.println("                      Facture numéro " + this.getNumeroFacture());
+		System.out.println("========================================================");
+		System.out.println("Date de création : " + this.getDateFacture());
+		System.out.println("Nom client : " + client.getNomClient());
+		System.out.println("--------------------------------------------------------");
+
+		
+		for (int i = 0; i < lignefacture.length; i++) {
+			System.out.println(lignefacture[i].toString());
+			total += lignefacture[i].getProduit().getPrix();
+		}
+
+		System.out.println("--------------------------------------------------------");
+		System.out.println("Total : " + total);
+	}
+}

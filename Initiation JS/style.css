@@ -1,0 +1,68 @@
+
+body {
+    background-color: #AEB8FE;
+    display: flex;
+}
+
+.dice {
+    width: 90px;
+    height: 90px;
+    border-radius: 10px;
+    background-color: #EFE5DC;
+    margin: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    display: none;
+
+}
+.block{
+    display : block ;
+}
+
+.dot {
+    width: 20px;
+    height: 20px;
+    border-radius: 15px;
+    background-color: black;
+    
+}
+.dot.dot--hd{
+    right: 10px;
+    top: 10px;
+    position: absolute;
+}
+.dot.dot--bd{
+    right: 10px;
+    bottom: 10px;
+    position: absolute;
+}
+.dot.dot--hg{
+    left: 10px;
+    top: 10px;
+    position: absolute;
+}
+.dot.dot--bg{
+    left: 10px;
+    bottom: 10px;
+    position: absolute;
+}
+.dot.dot--d{
+    right : 10px;
+    top: 35%;
+    transform : translateY(10%);
+    position: absolute;
+}
+.dot.dot--g{
+    left : 10px;
+    position: absolute;
+    top: 35%;
+    transform : translateY(10%);
+}
+.dot.dotun--center{
+    top : 50%;
+    left : 50%;
+    transform: translate(-50%,-50%);
+    position: absolute;
+}

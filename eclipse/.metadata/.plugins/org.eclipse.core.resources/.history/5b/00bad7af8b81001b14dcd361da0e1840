@@ -1,0 +1,82 @@
+package Exo_constructeur;
+
+public class Ordinateur {
+	private String string;
+	private String string2;
+	private int i;
+	private float f;
+	
+
+	public String getString() {
+		return string;
+	}
+
+
+	public void setString(String string) {
+		this.string = string;
+	}
+
+
+	public String getString2() {
+		return string2;
+	}
+
+
+	public void setString2(String string2) {
+		this.string2 = string2;
+	}
+
+
+	public int getI() {
+		return i;
+	}
+
+
+	public void setI(int i) {
+		this.i = i;
+	}
+
+
+	public float getF() {
+		return f;
+	}
+
+
+	public void setF(float f) {
+		this.f = f;
+	}
+
+
+	public Ordinateur(String string, String string2, int i, float f) {
+		// TODO Auto-generated constructor stub
+	}
+
+	public String toString() {
+		return "- " + this.getString() + "- " +
+				this.getString2() + " " + 
+				this.getI() + " " + 
+				this.getF() + " " ;
+	}
+	
+    // Créer propriété privée marque
+    // Créer propriété privée modele
+    // Créer propriété privée nbPoucesEcran
+    // Créer propriété privée prix
+
+    // Créer constructeur
+
+    // Créer getter marque
+    // Créer setter marque
+
+    // Créer getter modele
+    // Créer setter modele
+
+    // Créer getter nbPoucesEcran
+    // Créer setter nbPoucesEcran
+
+    // Créer getter prix
+    // Créer setter prix
+
+    // Créer toString
+
+}

@@ -1,0 +1,6 @@
+package exo;
+
+public class main {
+	Rectangle coucou = new Rectangle(20,40);
+	
+}

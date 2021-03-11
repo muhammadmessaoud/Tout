@@ -1,0 +1,20 @@
+
+public class Telephone {
+
+    // Créer propriété privée marque;
+    // Créer propriété privée modele;
+    // Créer propriété privée prix;
+
+    // Créer constructeur
+
+    // Créer getter marque
+    // Créer setter marque
+
+    // Créer getter modele
+    // Créer setter modele
+
+    // Créer getter prix
+    // Créer setter prix
+
+    // Créer toString
+}

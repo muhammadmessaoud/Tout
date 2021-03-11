@@ -1,0 +1,9 @@
+package exo;
+
+public class Rectangle {
+	private double largeur;
+	private double longueur;
+	
+	
+
+}

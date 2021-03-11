@@ -1,0 +1,23 @@
+
+public class Application {
+
+    public static void main(String[] args) {
+
+	System.out.println("Produits disponibles dans le magasin :");
+	System.out.println("--------------------------------------");
+	Ordinateur macBookAir13Pouces = new Ordinateur("Apple", "MacBook Air", 13, 1579.99f);
+	System.out.println(macBookAir13Pouces);
+	Ordinateur hp15Pouces = new Ordinateur("HP", "HP 15s-eq1003nf", 15, 399.99f);
+	System.out.println(hp15Pouces);
+	Ordinateur acerGamingNitro15Pouces = new Ordinateur("Acer", "Gaming Acer Nitro 5 AN515-55-51QY 15,6", 15,
+		1199.99f);
+	System.out.println(acerGamingNitro15Pouces);
+	Telephone iphone12 = new Telephone("Apple", "iPhone 12", 959.0f);
+	System.out.println(iphone12);
+	Telephone galaxyS20 = new Telephone("Samsung", "Galaxy S20 Ultra", 1149.0f);
+	System.out.println(galaxyS20);
+	Telephone huaweiP30 = new Telephone("Huawei", "P30", 539.05f);
+	System.out.println(huaweiP30);
+
+    }
+}

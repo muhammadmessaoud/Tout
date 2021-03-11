@@ -1,0 +1,12 @@
+package exo;
+
+public class TestRectangle {
+
+	public static void main(String[] args) {
+		Rectangle coucou = new Rectangle(20, 40);
+		coucou.afficher();
+		// TODO Auto-generated method stub
+
+	}
+
+}

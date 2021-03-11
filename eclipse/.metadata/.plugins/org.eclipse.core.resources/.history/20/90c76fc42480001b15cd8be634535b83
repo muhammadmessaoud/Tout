@@ -1,0 +1,74 @@
+public class AppFacturationAvecClasse {
+
+    public static void main(String[] args) {
+	System.out.println("App Facturation avec classe");
+
+	// FactureA
+	Client client1 = new Client();
+	client1.setNom("Toto");
+
+	Fournisseur fournisseurApple = new Fournisseur();
+	fournisseurApple.setNom("Apple");
+
+	Fournisseur fournisseurSamsung = new Fournisseur();
+	fournisseurSamsung.setNom("Samsung");
+
+	Produit produitIphone = new Produit();
+	produitIphone.setNom("iPhone 11");
+	produitIphone.setPrix(689);
+
+	Produit produitGalaxyS20 = new Produit();
+	produitGalaxyS20.setNom("Galaxy S20");
+	produitGalaxyS20.setPrix(799);
+
+	LigneFacture ligneFactureA1 = new LigneFacture();
+	ligneFactureA1.setFournisseur(fournisseurApple);
+	ligneFactureA1.setProduit(produitIphone);
+
+	LigneFacture ligneFactureA2 = new LigneFacture();
+	ligneFactureA2.setFournisseur(fournisseurSamsung);
+	ligneFactureA2.setProduit(produitGalaxyS20);
+
+	Facture factureA = new Facture();
+	factureA.setNumero(1);
+	factureA.setDate("2020-03-07");
+	factureA.setClient(client1);
+	factureA.setLigneFacture1(ligneFactureA1);
+	factureA.setLigneFacture2(ligneFactureA2);
+
+	factureA.afficherDansConsole();
+
+	System.out.println("");
+
+	// FactureB
+
+	Client client2 = new Client();
+	client2.setNom("Lala");
+
+	Fournisseur fournisseurWhirpool = new Fournisseur();
+	fournisseurWhirpool.setNom("Whirlpool");
+
+	Produit produitWhirlpoolFreshCare = new Produit();
+	produitWhirlpoolFreshCare.setNom("Whirlpool Fresh Care");
+	produitWhirlpoolFreshCare.setPrix(378.95f);
+
+	LigneFacture ligneFactureB1 = new LigneFacture();
+	ligneFactureB1.setFournisseur(fournisseurWhirpool);
+	ligneFactureB1.setProduit(produitWhirlpoolFreshCare);
+
+	LigneFacture ligneFactureB2 = new LigneFacture();
+	ligneFactureB2.setFournisseur(fournisseurApple);
+	ligneFactureB2.setProduit(produitIphone);
+
+	Facture factureB = new Facture();
+	factureB.setNumero(2);
+	factureB.setDate("2020-03-08");
+	factureB.setClient(client2);
+	factureB.setLigneFacture1(ligneFactureB1);
+	factureB.setLigneFacture2(ligneFactureB2);
+
+	factureB.afficherDansConsole();
+
+    }
+
+}

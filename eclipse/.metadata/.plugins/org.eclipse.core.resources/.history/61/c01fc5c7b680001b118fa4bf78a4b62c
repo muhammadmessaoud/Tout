@@ -1,0 +1,124 @@
+import java.time.LocalDate;
+
+public class AppFacturationOrganisation {
+
+    public static void main(String[] args) {
+	System.out.println("App Facturation sans classe 👉 pas organisé et on s'y perd dans toutes ces lignes de code");
+
+	// Contexte : logiciel de facturation
+	// ==================================
+	//
+	// Objectif #1 : Mieux organiser le code
+	// =====================================
+	//
+	// Problème : le code n'est pas organisé
+	// -------------------------------------
+	// Le code de toute l'application est rassemblé ici.
+	// Il n'y a pas d'organisation du code mis à part qu'on crée les variables
+	// au fur et à mesure qu'on a besoin d'afficher un élément de la facture.
+	//
+	// Problème : on se répète beaucoup (redondance)
+	// ---------------------------------------------
+	// On doit réécrire à chaque fois le code qui permet d'afficher le nom de la
+	// facture, le client, la date de facturation,...
+	// On répète les mêmes étapes ce qui nous fait perdre beaucoup de temps.
+	// En plus comme on fait tout à la main on peut se tromper.
+	//
+	// Est-ce qu'il y a un moyen de :
+	// ------------------------------
+	// - gagner du temps en ne répétant pas toujours les mêmes étapes ?
+	// - éviter de se tromper en réécrivant à la main chaque étapes ? Par exemple on
+	// pourrait oublier d'afficher la ligne de séparation entre l'en-tête de la
+	// facture et le contenu de celle-ci.
+	// - avoir un code plus lisible, mieux organisé car ici tout est en vrac et
+	// c'est difficile de s'y retrouver dans ces nombreuses lignes de code.
+	//
+	// Solution : créer des classes qui permettent de définir un code unique qu'on
+	// pourra plus facilement utiliser, maintenir et réutiliser
+	//
+	// Exercice : créer les classes suivante
+	// -------------------------------------
+	// - Client 👉 regroupe tout le code qui permet de représenter/afficher un
+	// client
+	//
+	// - Fournisseur 👉 regroupe tout le code qui permet de représenter/afficher un
+	// fournisseur
+	//
+	// - Produit 👉 regroupe tout le code qui permet de représenter/afficher un
+	// produit
+	//
+	// - Facture 👉 regroupe tout le code qui permet de représenter/afficher une
+	// facture
+	//
+	// - LigneFacture 👉 regroupe tout le code qui permet de représenter/afficher
+	// une ligne de facture
+	//
+
+	// FactureA
+
+	System.out.println("========================================================");
+	int numeroFactureA = 1;
+	System.out.println("                      Facture numéro " + numeroFactureA);
+	System.out.println("========================================================");
+
+	LocalDate dateFactureA = LocalDate.parse("2020-03-07");
+	System.out.println("Date de création : " + dateFactureA);
+
+	String nomClient1 = new String("Toto");
+	System.out.println("Nom client : " + nomClient1);
+
+	System.out.println("--------------------------------------------------------");
+
+	float total = 0;
+
+	String nomIphone11 = new String("iPhone 11");
+	float prixIphone11 = 689.0f;
+	total += prixIphone11;
+	String fournisseurApple = new String("Apple");
+	System.out.println("- " + nomIphone11 + " (" + prixIphone11 + " €) construit par " + fournisseurApple);
+
+	String nomGalaxyS20 = new String("Galaxy S20");
+	float prixGalaxyS20 = 799.0f;
+	total += prixGalaxyS20;
+	String fournisseurSamsung = new String("Samsung");
+	System.out.println("- " + nomGalaxyS20 + " (" + prixGalaxyS20 + " €) construit par " + fournisseurSamsung);
+
+	System.out.println("--------------------------------------------------------");
+
+	System.out.println("Total : " + total);
+
+	System.out.println("");
+
+	// FactureB
+
+	System.out.println("========================================================");
+	int numeroFactureB = 2;
+	System.out.println("                      Facture numéro " + numeroFactureB);
+	System.out.println("========================================================");
+
+	LocalDate dateFactureB = LocalDate.parse("2020-03-08");
+	System.out.println("Date de création : " + dateFactureB);
+
+	String nomClient2 = new String("Lala");
+	System.out.println("Nom client : " + nomClient2);
+
+	System.out.println("--------------------------------------------------------");
+
+	total = 0;
+
+	String nomWhirlpoolFreshCare = new String("Whirlpool Fresh Care");
+	float prixWhirlpoolFreshCare = 378.95f;
+	total += prixWhirlpoolFreshCare;
+	String fournisseurWhirlpool = new String("Whirlpool");
+	System.out.println("- " + nomWhirlpoolFreshCare + " (" + prixWhirlpoolFreshCare + " €) construit par "
+		+ fournisseurWhirlpool);
+
+	total += prixIphone11;
+	System.out.println("- " + nomIphone11 + " (" + prixIphone11 + " €) construit par " + fournisseurApple);
+
+	System.out.println("--------------------------------------------------------");
+
+	System.out.println("Total : " + total);
+
+    }
+}

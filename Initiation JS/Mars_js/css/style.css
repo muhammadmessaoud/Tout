@@ -1,0 +1,20 @@
+.bleu {
+    background-color: blue;
+}
+.rouge{
+    background-color: red;
+}
+#taille{
+    font-size: 3rem;
+}
+.petitetaille{
+    font-size: small;
+}
+.grandetaille{
+    font-size: large;
+}
+
+.vert{
+    color: green;
+    font-weight: bold;
+}

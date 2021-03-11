@@ -1,0 +1,34 @@
+*{
+    margin: 0px;
+}
+header{
+    background-color: #f44336;
+    height: 80px;
+    margin: 0px;
+}
+header .header_form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+header h1{
+    text-align: center;
+    margin: 5px;
+}
+.app{
+    width: 500px;
+    height: 500px;
+    margin: auto;
+}
+.content{
+    background-color: grey;
+    margin: 0px;
+  
+}
+.titreheader{
+    color: white;
+}
+.content ul {
+    list-style-type: none;
+}
+

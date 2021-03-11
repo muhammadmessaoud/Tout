@@ -1,0 +1,52 @@
+#container__img--relative{
+position: relative;
+left: 10px;
+}
+
+.container--hz-large {
+    height: 200px;
+    width: 500px;
+    background-color : pink;
+  }
+  
+  .container--hz-large .container__child {
+    position: relative;
+    height: 100%;
+    border: 3px dotted blue;
+    text-align: center;
+  }
+  .container--vc-large {
+    height: 500px;
+    width: 206px;
+    background-color : pink;
+  }
+  
+  .container--vc-large .container__child {
+    position: relative;
+    height: 100%;
+    border: 3px dotted blue;
+  }
+  
+  .container--vc-large .container__child img{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  }
+  .container--x-large {
+    height: 500px;
+    width: 500px;
+    background-color : pink;
+  }
+  
+  .container__child {
+    position: relative;
+    height: 100%;
+    border: 3px dotted blue;
+  }
+  
+  .container--x-large .container__child img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }

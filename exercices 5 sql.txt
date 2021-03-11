@@ -1,0 +1,36 @@
+exo 5
+SELECT departement_nom,departement_code,
+COUNT(ville_commune) AS nbcommune
+FROM villes_france_free
+RIGHT JOIN departement ON ville_departement = departement_code 
+GROUP BY ville_departement 
+ORDER BY nbcommune 
+DESC
+
+exo 6
+SELECT departement_nom, 
+ROUND(SUM(ville_surface)) AS surface 
+FROM villes_france_free 
+INNER JOIN departement ON ville_departement = departement_code 
+GROUP BY ville_departement 
+ORDER BY surface DESC LIMIT 10
+
+Correction Charly exo 5
+SELECT dep.departement_nom AS nd, dep.departement_code, sous_resultat.ville_count
+FROM departement AS dep
+LEFT JOIN (
+    SELECT v.ville_departement as ville_dep, COUNT(v.ville_departement), MIN(v.departement_nom) as ville_count
+    FROM departement d
+    LEFT JOIN villes_france_free v ON v.ville_departement = d.departement_code
+    GROUP BY v.ville_departement
+    ORDER BY ville_count DESC
+) sous_resultat
+ON dep.departement_code = sous_resultat.ville_dep
+ORDER BY sous_resultat.ville_count DESC
+
+exo 9 
+SELECT ville_nom,ville_surface,COUNT(ville_surface) surf
+FROM villes_france_free 
+WHERE ville_surface > (SELECT AVG(ville_surface) FROM villes_france_free)
+GROUP BY ville_nom,ville_surface
+ORDER BY surf DESC
